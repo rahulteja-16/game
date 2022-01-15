@@ -1,0 +1,30 @@
+export const ARIA = {
+	rules: 'Open Game Rules Modal',
+	closeRules: 'Close Game Rules Modal',
+	playAgain: 'Play Again',
+	resetScore: 'Reset Game Score',
+	errorClick: '404-Click',
+}
+
+export const TEXT = {
+	playAgain: 'PLAY AGAIN',
+	rules: 'RULES',
+	close: 'Close',
+	pentagon: 'Pentagon',
+	rock: 'Rock',
+	paper: 'Paper',
+	scissors: 'Scissors',
+	lizard: 'Lizard',
+	spock: 'Spock',
+	score: 'Score',
+	win: 'YOU WIN',
+	lose: 'YOU LOSE',
+	draw: 'DRAW',
+	picked: 'You Picked',
+	house: 'The House Picked',
+	reset: 'RESET SCORE',
+	Status404: '404_',
+	Error404: 'Your are beyond the borders',
+	ErrorBTN: 'REROUTE',
+	LOGO: 'Rock Paper Scissors Lizard Spock Logo',
+}
