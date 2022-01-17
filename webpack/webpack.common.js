@@ -1,6 +1,6 @@
 const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
-// const CopyPlugin = require('copy-webpack-plugin')
+const Copy = require('copy-webpack-plugin')
 
 module.exports = {
 	entry: path.resolve(__dirname, '..', './src/index.tsx'),
@@ -43,6 +43,9 @@ module.exports = {
 		// new CopyPlugin({
 		// 	patterns: [{ from: '../src', to: '/build' }],
 		// }),
+		new Copy({
+			patterns: [{ from: './public/*' }],
+		}),
 	],
 	stats: 'errors-only',
 }

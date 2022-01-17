@@ -1,3 +1,1 @@
-### Objective
-
-Rock Paper Scissors Lizard and Spock Game
+Rock Paper Scissors Lizard and Spock
