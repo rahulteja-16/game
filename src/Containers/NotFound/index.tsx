@@ -15,7 +15,7 @@ const NotFound = () => {
 	return (
 		<NotFoundWrapper>
 			<div>
-				<Img src={LOGO} alt={TEXT.LOGO} />
+				<Img src={LOGO} alt={TEXT.LOGO} data-testid="404-image" />
 			</div>
 			<ContentWrapper>
 				<ErrorSpan>{TEXT.Status404}</ErrorSpan>

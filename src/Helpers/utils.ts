@@ -1,6 +1,6 @@
 import { Choices, GameResult } from '../types'
 
-const checkWinLose = (
+export const checkWinLose = (
 	player: string | undefined,
 	computer: string | undefined
 ) => {

@@ -12,7 +12,7 @@ const Footer = ({ onUpdateScore }: FooterProps) => {
 	}
 	return (
 		<>
-			<FooterWrapper>
+			<FooterWrapper data-testid="footer-test">
 				<Button
 					aria={ARIA.rules}
 					text={TEXT.rules}

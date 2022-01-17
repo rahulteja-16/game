@@ -35,6 +35,7 @@ const ChoiceSelector = ({
 			addWidth={addWidth}
 			isHoverActive={isHoverActive}
 			showRipples={showRipples}
+			data-testid="choice-selector-test"
 		>
 			{choice === Choices.LIZARD && (
 				<Image addHeight={addHeight} src={lizardSVG} alt={Choices.LIZARD} />

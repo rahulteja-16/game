@@ -15,7 +15,11 @@ const PlayContainer = ({
 		<PlaySection>
 			<ScoreCard score={score} />
 			<PentagonWrapper>
-				<PentagonImg src={Pentagon} alt={TEXT.pentagon} />
+				<PentagonImg
+					src={Pentagon}
+					alt={TEXT.pentagon}
+					data-testid="pentagon-image"
+				/>
 				<PlayWrapper>
 					<ChoiceSelector
 						choice={Choices.SCISSORS}
