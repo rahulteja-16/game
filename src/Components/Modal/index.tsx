@@ -17,14 +17,18 @@ const Modal = ({ toggle }: ToggleProps) => {
 	const overlayRootEl = document.querySelector('#modal')
 	return overlayRootEl
 		? ReactDOM.createPortal(
-				<ModalContainer>
+				<ModalContainer data-testid="modal-test">
 					<ModalBox>
 						<ModalHeader>
 							<ModalH1>{TEXT.rules}</ModalH1>
 						</ModalHeader>
 						<ModalImg src={rules} alt={TEXT.rules} />
 						<ModalButtonWrapper>
-							<ModalButton aria-label={ARIA.closeRules} onClick={toggle}>
+							<ModalButton
+								aria-label={ARIA.closeRules}
+								onClick={toggle}
+								data-testid="close-modal"
+							>
 								<ModalImg src={close} alt={TEXT.close} />
 							</ModalButton>
 						</ModalButtonWrapper>

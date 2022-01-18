@@ -61,7 +61,7 @@ const BattleContainer = ({
 		<BattleSection>
 			<ScoreCard score={score} />
 
-			<BattleWrapper>
+			<BattleWrapper data-testid="battle-test">
 				<ItemWrapper>
 					<ChoiceSelector
 						addHeight={2}
@@ -94,7 +94,7 @@ const BattleContainer = ({
 				</ItemWrapper>
 			</BattleWrapper>
 
-			<BattleResult>
+			<BattleResult data-testid="battle-result">
 				{GameResult.WIN === status && <ResultText>{TEXT.win}</ResultText>}
 				{GameResult.LOSE === status && <ResultText>{TEXT.lose}</ResultText>}
 				{GameResult.DRAW === status && <ResultText>{TEXT.draw}</ResultText>}
