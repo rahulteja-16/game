@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 
 import { generateRandomChoice, updateStatus } from '../../Helpers/utils'
 import { BattleContainerProps, Choices, GameResult } from '../../types'
@@ -59,6 +59,7 @@ const BattleContainer = ({
 
 	return (
 		<BattleSection>
+			<Link to="/game">Game Internal</Link>
 			<ScoreCard score={score} />
 
 			<BattleWrapper data-testid="battle-test">
