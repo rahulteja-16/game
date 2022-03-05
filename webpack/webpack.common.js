@@ -49,7 +49,7 @@ const getWPConfig = (env) => {
 				name: 'game',
 				filename: 'game.js',
 				exposes: {
-					'./Game': './src/App.tsx',
+					'./Game': './src/Wrapper.tsx',
 				},
 				shared: {
 					react: {

@@ -23,7 +23,7 @@ const App = () => {
 			<GlobalStyles />
 			<Routes>
 				<Route
-					path="/"
+					path="/game"
 					element={
 						<PlayContainer
 							updateUserChoice={updateUser}
