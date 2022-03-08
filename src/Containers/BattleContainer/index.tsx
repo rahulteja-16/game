@@ -33,7 +33,7 @@ const BattleContainer = ({
 
 	useEffect(() => {
 		if (userChoice === Choices.DEFAULT) {
-			navigate(-1)
+			navigate('/game')
 		}
 		setComputerPick(generateRandomChoice())
 	}, [navigate, userChoice])
@@ -100,7 +100,7 @@ const BattleContainer = ({
 				{GameResult.DRAW === status && <ResultText>{TEXT.draw}</ResultText>}
 				<PlayAgainWrapper>
 					<PlayAgainButton
-						onClick={() => navigate(-1)}
+						onClick={() => navigate('/game')}
 						aria-label={ARIA.playAgain}
 					>
 						{TEXT.playAgain}
