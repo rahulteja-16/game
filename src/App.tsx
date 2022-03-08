@@ -1,16 +1,21 @@
 import GlobalStyles from './Styles/GlobalStyles'
-import { Routes, Route, Router } from 'react-router-dom'
-import { useState } from 'react'
+import { Routes, Route, Router, Link } from 'react-router-dom'
+import { useState, useLayoutEffect } from 'react'
 
 import BattleContainer from './Containers/BattleContainer'
 import PlayContainer from './Containers/PlayContainer'
 import NotFound from './Containers/NotFound'
 import { Choices } from './types'
 import useLocalStorage from './Hooks/useLocalStorage'
+import { HistoryRouter } from './HistoryRouter'
 
 const App = ({ history }: any) => {
 	const [score, setScore] = useLocalStorage('score', 0)
 	const [userChoice, setUserChoice] = useState<Choices>(Choices.DEFAULT)
+	const [state, setState] = useState({
+		action: history.action,
+		location: history.location,
+	})
 
 	const updateUser = (choice: Choices) => {
 		setUserChoice(choice)
@@ -20,7 +25,7 @@ const App = ({ history }: any) => {
 	return (
 		<>
 			<GlobalStyles />
-			<Router navigator={history} location={history.location}>
+			<HistoryRouter history={history} >
 				<Routes>
 					<Route
 						path="/game"
@@ -44,7 +49,7 @@ const App = ({ history }: any) => {
 					/>
 					<Route path="*" element={<>NotFound</>} />
 				</Routes>
-			</Router>
+			</HistoryRouter>
 		</>
 	)
 }
